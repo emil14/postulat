@@ -1,0 +1,8 @@
+Postulat variable naming convention
+
+PI = 3.14 # Constances
+someVar = PI * 2 #
+SomeClass = ()
+_std third-party
+
+

@@ -1,0 +1,31 @@
+{ lg } = 'std::io'
+
+Human = props <= {
+  constructor(spec) {
+    props
+  }
+  run() {
+
+  }
+}
+
+
+Woman = Human({
+  constructor(super) {
+    super()
+  }
+})
+
+sarah = Woman('red' 'blue' 'white')
+lg(props)
+###
+{
+  _parent: { ... }
+  hairColor: 'red'
+  eyesColor: 'blue'
+  skinColor: 'white'
+  run(speed) {
+    <=
+  }
+}
+###

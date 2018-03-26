@@ -1,0 +1,19 @@
+{
+  "name": "postulat",
+  "version": "0.0.1",
+  "description": "Clear language",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "tsc -w",
+    "build": "tsc",
+    "docs": "typedoc --theme minimal --out ./docs ./src",
+    "test": "node tests/index.js"
+  },
+  "author": "Emil Valeev <emil.musician@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.7.2",
+    "typedoc": "^0.11.1"
+  }
+}

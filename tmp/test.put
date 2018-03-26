@@ -1,0 +1,7 @@
+# in.put
+
+{log} = std::io
+
+enter() {
+  <= log('hello world')
+}

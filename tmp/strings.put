@@ -1,0 +1,39 @@
+Single quotes are used for plain text.
+```
+lg = 'std::io::lg'
+lg('Hello world!') # Hello world!
+```
+You should use this style when you don't need any dynaming computing.
+
+Double quotes allows to use `$` for variable interpolation:
+```
+userName = 'Some Name'
+lg("Hello, $userName.") # Hello, Some Name.
+```
+And expression interpolation via curly-braces:
+```
+lg("1+1={1 + 1}") # 1+1=2
+```
+
+And about multiple-line strings in Postulat. Whell, they just works:
+```
+msg = '
+  Скажи ка, дядя, ведь не даром?
+  Москва, спалённая пожаром,
+  Была французу отдана?
+'
+```
+Double-quotes will do the trick too if you would need.
+
+Examples:
+HTML-template:
+```
+template = (firstName, lastName) => "
+  <div class="root">
+    <span>first name: {firstName}</span>
+    <span>last name: {lastName}</span>
+  </div>
+"
+lg(template('Sarah', 'Konor', 'sir'))
+```
+
