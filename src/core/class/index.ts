@@ -2,6 +2,8 @@
  * `Class`.
  */
 
+// IDEA: parent = function.name
+
 export const Class = (...members: Array<object | Function>): Function => {
   const wrappers = members.map((member: object | Function) => {
     const wrapper: any = {};
