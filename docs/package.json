@@ -1,0 +1,14 @@
+{
+  "name": "postulat-docs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "README.md",
+  "scripts": {
+    "serve": "gitbook serve",
+    "start": "npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gitbook build"
+  },
+  "author": "emil14 <emil.musician@gmail.com>",
+  "license": "MIT"
+}
