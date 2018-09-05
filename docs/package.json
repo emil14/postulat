@@ -10,5 +10,8 @@
     "build": "gitbook build"
   },
   "author": "emil14 <emil.musician@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
 }
