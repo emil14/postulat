@@ -1,9 +1,10 @@
-# Getting started
-```shell
-git cl git@github.com:emil14/postulat.git
-cd postulat
+# Postulat, the programming language
 
-npm start # watch for changes
-npm run build # compile ts
-npm run docs # build docs
+This is the concept of an ideal programming language from my point of view.
+It's functional, typed and minimalistic.
+Someday I will implement it! :)
+
+```shell
+git clone git@github.com:emil14/postulat.git # clone repo
+cd postulat
 ```
