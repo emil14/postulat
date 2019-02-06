@@ -1,8 +1,7 @@
 # Postulat, the programming language
 
-This is the concept of an ideal programming language from my point of view.
-It's functional, typed and minimalistic.
-Someday I will implement it! :)
+This is concept of ideal programming language from my point of view.
+It should be pure functional and minimalistic.
 
 ```shell
 git clone git@github.com:emil14/postulat.git # clone repo
