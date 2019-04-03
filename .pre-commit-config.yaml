@@ -1,0 +1,12 @@
+# replace with plane git hooks to run local libs
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: master
+    hooks:
+    - id: flake8
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: master
+    hooks:
+    - id: mypy
+
