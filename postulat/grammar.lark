@@ -1,0 +1,7 @@
+// Terminals
+
+INT : ("0".."9")+
+FLOAT: INTEGER "." INTEGER
+
+// Rules ...
+
