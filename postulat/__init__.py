@@ -1,6 +1,5 @@
-from lark import lark
+from pathlib import Path
+from lark import Lark
 
-with open('grammar.lark') as f:
-    print(f.readlines())
-
-l = lark(grammar)
+grammar_path = Path.cwd() / 'grammar.lark'
+lark_parser = Lark(grammar_path.read_text())
