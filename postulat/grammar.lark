@@ -1,7 +1,31 @@
-// Terminals
+%import common (INT FLOAT LETTER NEWLINE)
 
-INT : ("0".."9")+
-FLOAT: INTEGER "." INTEGER
+VAR = LETTER
+TYPE: "int" | "float" | "str" | "fn"
+VALUE = INT | FLOAT
 
-// Rules ...
+start: func_def
+func_def: stateless_func_def | statefull_func_def
+stateless_func_def: '(' func_args* ')' '->' instruction
+statefull_func_def: '(' func_args* ')' '=>' block_statement
+func_args: arg ("," arg)*
+arg: VAR ":" TYPE
+block_statement: "{" NEWLINE instruction (NEWLINE instruction)* NEWLINE "}"
+instruction: expr (operator expr)*
+expr: unary_operation | binary_operation | ternary_operation
+operator: unary_operator | binary_operator | ternary_operator
+unary_operation = ('-' VALUE | expr) | func_call
+binary_operation: operand binary_operator operand
+ternary_operation: operand '?' operand : ':' operand
+binary_operator = '+' | '-' | '*' | '/' | '^'
+operand = VALUE | expr
+func_call: VAR "(" call_params ")"
+call_params: VAR ("," VAR)*
+
+
+
+
+
+
+
 
