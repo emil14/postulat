@@ -1,6 +1,1 @@
-fn = x -> {
-  a = 10
-  x + a
-}
-
-fn(2)
+(x: int, y: int) -> x * y
