@@ -1,12 +1,8 @@
 # Postulat
 
-* Everything is Expression or Value
-* Expression produce Value
-* Function is Value that can be called to return Expression
+* Everything is an Expression or Value
+* Expressions always produce Values
+* Function is a Value that can be called to return Expression
+* All Functions are pure
 
-* Function is always pure
-
-* Value has Type
-* Function has Interface
-* Interface depends on Types
 
