@@ -1,9 +1,12 @@
-# Postulat, the programming language
+# Postulat
 
-This is concept of an ideal programming language from my point of a view.
-It should be pure functional and minimalistic.
+* Everything is Expression or Value
+* Expression produce Value
+* Function is Value that can be called to return Expression
 
-```shell
-git clone git@github.com:emil14/postulat.git # clone repo
-cd postulat
-```
+* Function is always pure
+
+* Value has Type
+* Function has Interface
+* Interface depends on Types
+
