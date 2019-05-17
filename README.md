@@ -1,5 +1,9 @@
 # Postulat
 
-* Everything is an Expression or Value
-* Expressions always produce Values
-* Function is a Value that can be called to return Expression
+## Everything is Value
+
+* Everything is Value, Expression or Function
+* But Functions return Expressions and Expressions produce Values
+* And Function is Actually a Value too
+
+So **Everything is Value**
