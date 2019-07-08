@@ -1,42 +1,32 @@
-%import common.INT
-%import common.FLOAT
-%import common.LETTER
+%import common.SIGNED_NUMBER
+%import common.ESCAPED_STRING
+%import common.WORD
 %import common.NEWLINE
 %import common.WS
 
 %ignore WS
 
-ID: LETTER
-TYPEDEF: "int" | "float"
-VAL: INT | FLOAT
-OPERATOR: "+" | "-" | "*" | "/" | "="
-
-start: stateless_func_def | statefull_func_def
-
-stateless_func_def: "(" func_args ")" "->" expr
-
-statefull_func_def: "(" func_args ")" "=>" code_block
-
-func_args: arg ("," arg)*
-
-arg: ID ":" TYPEDEF
-    
-code_block: "{" NEWLINE expr (NEWLINE expr)* NEWLINE "}"
-    
-expr: VAL | assign_expr | func_call_expr | comp_expr
-
-assign_expr: ID "=" expr
-
-func_call_expr: ID "(" call_params ")"
-
-comp_expr: expr OPERATOR expr
-
-call_params: ID ("," ID)*
-
-
-
-
-
-
-
+// Rules
+start: obj (NEWLINE obj)*
+  obj: alias | lit | expr
+    alias: WORD
+    lit: prim | non_prim
+      prim: bool_lit | num_lit | str_lit
+        bool_lit: "true" | "false"
+        num_lit: SIGNED_NUMBER
+        str_lit: ESCAPED_STRING
+      non_prim: list_lit | func_lit
+        list_lit: "[" obj ("," obj)* "]"
+        func_lit: "(" func_args? ")" "->" obj
+          func_args: func_arg ("," func_arg)*
+            func_arg: WORD ":" type_ref
+              type_ref: "bool" | "num" | "str" | "func" | "list" | alias
+    expr: math_expr | func_call_expr
+      math_expr: unary_expr | binary_expr | ternary_expr
+        operator: "+" | "-" | "="
+        unary_expr: operator obj
+        binary_expr: obj operator obj
+        ternary_expr: obj operator obj operator obj
+      func_call_expr: alias "(" call_params? ")"
+        call_params: obj ("," obj)*
 

@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "/home/emil14/.local/share/virtualenvs/postulat-27sHoAs7/bin/python",
+  "python.pythonPath": "C:\\Users\\root\\.virtualenvs\\postulat-KODhdPXg\\Scripts\\python.exe",
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true
