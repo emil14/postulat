@@ -9,4 +9,4 @@ syntax_test_txt = (cwd / 'syntax-test.txt').read_text()
 lark_parser = Lark(grammar_txt, propagate_positions=True)
 tree = lark_parser.parse(syntax_test_txt)
 
-print(tree.pretty())
+print(tree)
